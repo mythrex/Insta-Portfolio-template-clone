@@ -119,3 +119,40 @@ html,body
 	z-index: 1000
 	&:hover
 		color: $primary-color
+
+// profile
+.profile-page
+	height: 100%
+	
+	.image-container
+		height: 500px
+		@include desktop
+			height: 100%
+		@include large-desktop
+			height: 100%
+		display: flex
+		background: black
+		color: white
+
+		.main-heading
+			margin-top: auto
+			padding: 20px
+			width: 100%
+			h2
+				margin: 0
+				font-size: 8vh
+				font-weight: bold
+				position: relative
+				
+				
+				&::after
+					background-color: $primary-color
+					position: absolute
+					content: ""
+					top: 100%
+					left: 0
+					width: 50%
+					height: 6px
+
+	.content-container
+		background: blue
