@@ -1,7 +1,7 @@
 @import "modules/mixins"
 @import "modules/vars"
 @import './modules/palette'
-
+@import "./modules/animations"
 .text-primary
 	color: $primary-color
 
@@ -13,6 +13,8 @@ html,body
 .home-page
 	height: 100%
 	width: 100%
+	z-index: 2000
+	position: relative
 
 .introduction
 	background: #212229
@@ -26,39 +28,94 @@ html,body
 		padding: 20px
 		h1
 			font-size: 8vh
+			text-align: center
 		h2
 			font-size: 5vh
+			text-align: center
 
 	img
 		position: absolute
 		top: 0
 		left: 0
 
-
 .menu
-	background: green
+	background: black
 	color: white
 	height: 100%
 	ul
-		margin: 0;
+		margin: 0
+		height: 100%
 		li
 			height: 25%
 			display: flex
 			position: relative
+
 			.content
 				margin: auto
 				width: 100%
 
-				img
-					position: absolute
-					top: 0
-					left: 0
+				.col.s2
+					span
+						font-size: 25px
+						border-radius: 50%
+						background: rgba(255, 255, 255, 0.2)
+						height: 60px
+						width: 60px
+						text-align: center
+						line-height: 60px
+						vertical-align: center
+				.col.s10
+					h2
+						font-size: 5vh
+						margin: 0
+					h3
+						font-size: 3vh
+						margin: 0
+			&:hover
+				.content
+					.col.s2
+						span
+							animation-name: shadow-flash
+							animation-duration: 0.3s
+							animation-timing-function: ease-out
 
-.mask
-	width: 100%
-	height: 100%
-	position: absolute
+
+
+			img
+				position: absolute
+				top: 0
+				left: 0
+
+// .mask
+// 	width: 100%
+// 	height: 100%
+// 	position: absolute
+// 	top: 0
+// 	left: 0
+// 	background: coral
+// 	opacity: 0.1
+
+.social-media
+	list-style: none
+	li
+		display: inline-block
+		padding: 10px
+		margin: 5px
+		font-size: 5vh
+
+		a
+			color: white
+
+			&:hover
+				color: $primary-color
+
+.close-btn
+	font-size: 2.5em
+	color: white
+	position: fixed
 	top: 0
-	left: 0
-	background: coral
-	opacity: 0.1
+	right: 20px
+	cursor: pointer
+	z-index: 1000
+	&:hover
+		color: $primary-color

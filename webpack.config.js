@@ -46,7 +46,7 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-      		template: 'ejs-simple-loader?title=MaharajaAcademy-Home&activePage=home!./src/index.ejs',
+      		template: 'ejs-simple-loader?title=Profile&activePage=home!./src/index.ejs',
       		filename: 'index.html',
       		minify: {
       			collapseWhitespace: true
