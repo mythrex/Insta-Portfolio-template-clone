@@ -4,6 +4,9 @@
 @import "./modules/helpers"
 @import "./modules/animations"
 
+*
+	box-sizing: border-box
+
 html,body
 	height: 100%
 	width: 100%
@@ -119,11 +122,13 @@ html,body
 	right: 20px
 	cursor: pointer
 	z-index: 1000
-	border: 1px solid $divider-color
+	border: 1px solid black
 	&:hover
 		color: $primary-color
 		background: white
-		transition: 0.5s
+		border: 1px solid $primary-color
+		transition: all 0.5s
+
 
 
 // profile section
@@ -133,15 +138,16 @@ html,body
 	
 .image-container
 	height: 500px
-	@include desktop
+	position: relative
+	top: 0
+	@include larger-than-desktop
 		height: 100%
-	@include large-desktop
-		height: 100%
+		position: fixed
+		top: 0
+
 	display: flex
 	background: gray
 	color: white
-	position: fixed
-	top: 0
 	
 	.main-heading
 		padding: 20px
@@ -155,7 +161,7 @@ html,body
 			font-size: 8vh
 			font-weight: bold
 			position: absolute
-			bottom: 30px
+			bottom: 20%
 			
 			&::after
 				background-color: $primary-color
@@ -182,3 +188,109 @@ html,body
 		vertical-align: center
 		color: $primary-color-dark
 		
+
+//resume page
+.resume-page
+	height: 100%
+
+.education-container
+	position: relative
+	@include larger-than-tablet
+		&::before
+			background: $primary-color
+			content: ""
+			height: 95%
+			position: absolute
+			width: 2px
+			left: 25px
+			top: 15px
+
+
+
+	.item
+		display: flex
+		margin-bottom: 30px
+
+		.bullet
+			display: inline-block
+			height: 30px
+			width: 30px
+			background: $primary-color
+			border-radius: 50%
+			border: 5px solid white
+			z-index: 100
+		.education-content
+			flex: 9
+			display: inline-block
+			margin-left: 15px
+			padding-left: 10px
+
+			h4
+				margin: 0
+				position: relative
+				background-color: $primary-color
+				padding: 10px
+				font-size: 18px
+				font-weight: 500
+				color: white
+				@include larger-than-tablet
+					&::before
+						border-width: 10px
+						border-style: solid
+						border-color: transparent $primary-color transparent transparent
+						content: ""
+						border-image: none
+						position: absolute
+						top: 5px
+						right: 100%
+
+.experience-container
+	position: relative
+	@include larger-than-tablet
+		&::before
+			background: white
+			content: ""
+			height: 95%
+			position: absolute
+			width: 2px
+			right: 14px
+			top: 5px
+
+	.item
+		display: flex
+		margin-bottom: 30px
+		flex-direction: row-reverse
+
+		.bullet
+			display: inline-block
+			height: 30px
+			width: 30px
+			background: white
+			border-radius: 50%
+			border: 5px solid $primary-color
+			z-index: 100
+		.experience-content
+			flex: 9
+			display: inline-block
+			margin-right: 15px
+			padding-right: 10px
+
+			h4
+				margin: 0
+				position: relative
+				background-color: white
+				padding: 10px
+				font-size: 18px
+				font-weight: 500
+				color: $primary-color
+				@include larger-than-tablet
+					&::before
+						border-width: 10px
+						border-style: solid
+						border-color: transparent transparent transparent white
+						content: ""
+						border-image: none
+						position: absolute
+						top: 5px
+						left: 100%
+
