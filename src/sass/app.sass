@@ -1,9 +1,8 @@
 @import "modules/mixins"
 @import "modules/vars"
 @import './modules/palette'
+@import "./modules/helpers"
 @import "./modules/animations"
-.text-primary
-	color: $primary-color
 
 html,body
 	height: 100%
@@ -111,48 +110,75 @@ html,body
 
 .close-btn
 	font-size: 2.5em
+	background: black
+	padding: 5px
+	margin-top: 20px
 	color: white
 	position: fixed
-	top: 0
+	top: 25px
 	right: 20px
 	cursor: pointer
 	z-index: 1000
+	border: 1px solid $divider-color
 	&:hover
 		color: $primary-color
+		background: white
+		transition: 0.5s
 
-// profile
+
+// profile section
+
 .profile-page
 	height: 100%
 	
-	.image-container
-		height: 500px
-		@include desktop
-			height: 100%
-		@include large-desktop
-			height: 100%
-		display: flex
-		background: black
-		color: white
-
-		.main-heading
-			margin-top: auto
-			padding: 20px
+.image-container
+	height: 500px
+	@include desktop
+		height: 100%
+	@include large-desktop
+		height: 100%
+	display: flex
+	background: gray
+	color: white
+	position: fixed
+	top: 0
+	
+	.main-heading
+		padding: 20px
+		width: 100%
+		height: inherit
+		margin-bottom: 30px
+		position: relative
+		h2
 			width: 100%
-			h2
-				margin: 0
-				font-size: 8vh
-				font-weight: bold
-				position: relative
-				
-				
-				&::after
-					background-color: $primary-color
-					position: absolute
-					content: ""
-					top: 100%
-					left: 0
-					width: 50%
-					height: 6px
+			margin: 0
+			font-size: 8vh
+			font-weight: bold
+			position: absolute
+			bottom: 30px
+			
+			&::after
+				background-color: $primary-color
+				position: absolute
+				content: ""
+				top: 100%
+				left: 0
+				width: 50%
+				height: 6px
 
-	.content-container
-		background: blue
+.content-container
+
+.services
+	margin-bottom: 5px
+
+	.fa
+		font-size: 25px
+		border-radius: 50%
+		background: rgba(256, 256, 256, 0.8)
+		height: 60px
+		width: 60px
+		text-align: center
+		line-height: 60px
+		vertical-align: center
+		color: $primary-color-dark
+		
