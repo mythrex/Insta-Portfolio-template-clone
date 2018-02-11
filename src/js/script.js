@@ -1,13 +1,16 @@
 /*  ------------------
     Remove Preloader
     ------------------  */
-
-$(window).load(function () {
-		
-    $('#preloader').delay(350).fadeOut('slow', function () {
-        $('.profile-page, .resume-page, .contact-page, .portfolio-page').hide();
-    });
-});
+window.onload = function() {
+  $('#preloader').delay(500).fadeOut('slow', function () {
+      $('.profile-page, .resume-page, .contact-page, .portfolio-page').hide();
+  });
+};
+// $(window).load(function () {
+//     $('#preloader').delay(350).fadeOut('slow', function () {
+//         $('.profile-page, .resume-page, .contact-page, .portfolio-page').hide();
+//     });
+// });
 
 
 $(function () {
