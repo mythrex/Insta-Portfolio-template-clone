@@ -1,0 +1,39 @@
+#preloader
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #1a1b23
+  z-index: 10000
+
+.loader
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 30px
+  height: 30px
+  transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0)
+  animation: loader 1.2s infinite ease-in-out
+  span
+    position: absolute
+    display: block
+    width: 20px
+    height: 20px
+    opacity: 0.8
+    background-color: #FFC300
+    animation: loaderBlock 1.2s infinite ease-in-out
+    &:nth-child(1)
+      top: 0
+      left: 0
+    &:nth-child(2)
+      top: 0
+      right: 0
+      animation: loaderBlockInverse 1.2s infinite ease-in-out
+    &:nth-child(3)
+      bottom: 0
+      left: 0
+      animation: loaderBlockInverse 1.2s infinite ease-in-out
+    &:nth-child(4)
+      bottom: 0
+      right: 0

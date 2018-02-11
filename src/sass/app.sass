@@ -3,6 +3,7 @@
 @import './modules/palette'
 @import "./modules/helpers"
 @import "./modules/animations"
+@import "./modules/preloader"
 
 *
 	box-sizing: border-box
@@ -44,6 +45,7 @@ html,body
 	background: black
 	color: white
 	height: 100%
+	position: relative
 	ul
 		margin: 0
 		height: 100%
@@ -51,6 +53,7 @@ html,body
 			height: 25%
 			display: flex
 			position: relative
+			cursor: pointer
 
 			.content
 				margin: auto
@@ -135,6 +138,8 @@ html,body
 
 .profile-page
 	height: 100%
+	position: absolute
+	top: 0
 	
 .image-container
 	height: 500px
@@ -192,6 +197,8 @@ html,body
 //resume page
 .resume-page
 	height: 100%
+	position: absolute
+	top: 0
 
 .education-container
 	position: relative
@@ -295,6 +302,13 @@ html,body
 						left: 100%
 
 //contact
+.contact-page
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+
 .contact-section
 	.col.s12
 		color: $primary-text-color
@@ -309,4 +323,5 @@ html,body
 		a
 			font-size: 2vh
 			color: $primary-text-color
+
 
