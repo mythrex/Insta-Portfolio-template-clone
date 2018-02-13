@@ -21,6 +21,9 @@ html,body
 	position: relative
 	overflow-x: hidden
 	overflow-y: auto
+	.col.s12.m6
+		padding: 0
+		height: 100%
 
 .introduction
 	background: #212229
@@ -340,6 +343,22 @@ html,body
 			color: $primary-text-color
 
 @media(max-width: 600px)
+	.home-page
+		.col.s12.m6:first-child
+			height: 40vh
+			h1
+				font-size: 2rem
+				margin: 25px 0 10px 0
+			h2,aka
+				display: none
+			.social-media
+				margin: 0
+				padding: 0
+				li
+					margin-top: 0
+					margin-bottom: 0
+		.col.s12.m6:last-child
+			height: 60vh
 	.menu
 		background: black
 		color: white
