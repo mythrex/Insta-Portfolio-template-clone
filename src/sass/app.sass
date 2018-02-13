@@ -19,6 +19,8 @@ html,body
 	width: 100%
 	z-index: 2000
 	position: relative
+	overflow-x: hidden
+	overflow-y: auto
 
 .introduction
 	background: #212229
@@ -142,7 +144,7 @@ html,body
 	position: absolute
 	top: 0
 	overflow-y: scroll
-	
+
 .image-container
 	height: 500px
 	position: relative
@@ -155,7 +157,7 @@ html,body
 	display: flex
 	background: gray
 	color: white
-	
+
 	.main-heading
 		padding: 20px
 		width: 100%
@@ -169,7 +171,7 @@ html,body
 			font-weight: bold
 			position: absolute
 			bottom: 20%
-			
+
 			&::after
 				background-color: $primary-color
 				position: absolute
@@ -194,7 +196,7 @@ html,body
 		line-height: 60px
 		vertical-align: center
 		color: $primary-color-dark
-		
+
 
 //resume page
 .resume-page
@@ -336,5 +338,3 @@ html,body
 		a
 			font-size: 2vh
 			color: $primary-text-color
-
-
