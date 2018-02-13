@@ -165,7 +165,7 @@ html,body
 		margin-bottom: 30px
 		position: relative
 		h2
-			width: 100%
+			width: 95%
 			margin: 0
 			font-size: 8vh
 			font-weight: bold
@@ -338,3 +338,32 @@ html,body
 		a
 			font-size: 2vh
 			color: $primary-text-color
+
+@media(max-width: 600px)
+	.menu
+		background: black
+		color: white
+		height: 100%
+		position: relative
+		ul
+			margin: 0
+			height: 100%
+			li
+				height: 25%
+				display: flex
+				position: relative
+				cursor: pointer
+
+				.content
+					margin: auto
+					width: 100%
+					.col.s2
+						background: rgba(255, 255, 255, 0.2)
+						border-radius: 100%
+						span
+							font-size: 25px
+							border-radius: 50%
+							text-align: center
+							width: 100%
+							line-height: 60px
+							vertical-align: center
