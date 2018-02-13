@@ -1,4 +1,5 @@
-#Profile
+# Profile
+This repo is clone of insta portfolio template. This was a paid template but we deconstructed the website and reverse engineered it. This is only for education __not for sale.__ We fully respect and admire the creativity of designer of the template.
 
 ## How to use?
 Install Packages
