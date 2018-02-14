@@ -21,6 +21,9 @@ html,body
 	position: relative
 	overflow-x: hidden
 	overflow-y: auto
+	.col.s12.m6
+		padding: 0
+		height: 100%
 
 .introduction
 	background: #212229
@@ -165,7 +168,7 @@ html,body
 		margin-bottom: 30px
 		position: relative
 		h2
-			width: 100%
+			width: 95%
 			margin: 0
 			font-size: 8vh
 			font-weight: bold
@@ -338,3 +341,51 @@ html,body
 		a
 			font-size: 2vh
 			color: $primary-text-color
+
+@media(max-width: 600px)
+	.home-page
+		.col.s12.m6:first-child
+			height: 40vh
+			h1
+				font-size: 2rem
+				margin: 25px 0 10px 0
+			h2,aka
+				display: none
+			.social-media
+				margin: 0
+				padding: 0
+				li
+					margin-top: 0
+					margin-bottom: 0
+		.col.s12.m6:last-child
+			height: 60vh
+			.content
+				.row
+					margin-bottom: 0
+	.menu
+		background: black
+		color: white
+		height: 100%
+		position: relative
+		ul
+			margin: 0
+			height: 100%
+			li
+				height: 25%
+				display: flex
+				position: relative
+				cursor: pointer
+
+				.content
+					margin: auto
+					width: 100%
+					.col.s2
+						background: rgba(255, 255, 255, 0.2)
+						border-radius: 100%
+						span
+							font-size: 25px
+							border-radius: 50%
+							text-align: center
+							width: 100%
+							line-height: 60px
+							vertical-align: center
